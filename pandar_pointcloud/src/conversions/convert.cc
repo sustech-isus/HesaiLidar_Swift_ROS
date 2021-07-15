@@ -957,7 +957,7 @@ void Convert::calcPointXYZIT(pandar_msgs::PandarPacket &packet, int cursor) {
 				point.x = xyDistance * m_fSinAllAngle[azimuthIdx];
 				point.y = xyDistance * m_fCosAllAngle[azimuthIdx];
 				point.z = distance * m_fSinAllAngle[pitchIdx];
-				point.intensity = unit.u8Intensity;
+				point.intensity = static_cast<float>(unit.u8Intensity) / 255.0f;
 				point.timestamp = unix_second + (static_cast<double>(pkt.tail.nTimestamp)) / 1000000.0;
 				point.timestamp = point.timestamp + m_objLaserOffset.getBlockTS(blockid, pkt.tail.nReturnMode, mode, pkt.head.u8LaserNum) / 1000000000.0 + offset / 1000000000.0;
 				if(0 == m_dTimestamp) {

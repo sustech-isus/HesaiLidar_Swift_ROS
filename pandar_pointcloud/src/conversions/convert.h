@@ -330,7 +330,8 @@ typedef struct PacketsBuffer_s {
 
 } PacketsBuffer;
 
-typedef pandar_pointcloud::PointXYZIT PPoint;
+//typedef pandar_pointcloud::PointXYZIT PPoint;
+typedef pandar_pointcloud::PointXYZITR PPoint;
 typedef pcl::PointCloud<PPoint> PPointCloud;
 typedef struct RedundantPoint_s {
   int index;

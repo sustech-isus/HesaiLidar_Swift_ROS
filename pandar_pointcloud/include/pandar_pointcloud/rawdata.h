@@ -39,7 +39,7 @@
 namespace pandar_rawdata
 {
 // Shorthand typedefs for point cloud representations
-typedef pandar_pointcloud::PointXYZIT PPoint;
+typedef pandar_pointcloud::PointXYZITR PPoint;
 typedef pcl::PointCloud<PPoint> PPointCloud;
 
 static const int SOB_ANGLE_SIZE = 4;

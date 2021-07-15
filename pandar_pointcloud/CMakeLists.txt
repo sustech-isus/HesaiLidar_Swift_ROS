@@ -3,6 +3,7 @@ project(pandar_pointcloud)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_compile_options(-w)
 
 set(${PROJECT_NAME}_CATKIN_DEPS
     angles
